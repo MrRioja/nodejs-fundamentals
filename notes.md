@@ -13,3 +13,5 @@
   "dev": "node --watch src/server.js"
 }
 ```
+
+- Para indicar que a resposta está em um formato especifico devemos setar o header `Content-type` com o valor deseja, como por exemplo `application/json` para JSON.
