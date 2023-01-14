@@ -6,6 +6,8 @@
 "type": "module"
 ```
 
+> ℹ Ao utilizar esse type, devemos especificar a extensão ao importar um arquivo de um modulo.
+
 - As versões mais atuais do Node já suportam a flag `--watch` em scripts para sincronizar alterações do código sem ter que reiniciar o servidor. Basta criar um script no `package.json` como abaixo:
 
 ```json
