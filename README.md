@@ -19,11 +19,55 @@
 
 Projeto I do bootcamp Ignite da [RocketSeat](https://www.rocketseat.com.br/) na versão lançada da trilha 2023. No primeiro módulo foi desenvolvido uma API RESTful com NodeJS focada nos fundamentos da tecnologia, sem frameworks ou bibliotecas externas.
 
-O conteúdo aborda módulos internos do NodeJS como HTTP, Crypto e File System e sobre fundamentos HTTP como requests, respondes, headers, status code, route e query parameters, etc. Também possuem profundidade em Streams no NodeJS e como aplica-las para realizarmos operações assíncronas e parciais em nosso back-end.
-
 ## Fundamentos do NodeJS
 
-🚧 **_Em construção_** 🚧
+No primeiro projeto da trilha de NodeJS v2023 foi construída uma API simples porém utilizando os recursos nativos do NodeJS.
+
+O conteúdo aborda módulos internos do NodeJS como HTTP, Crypto e File System e sobre fundamentos HTTP como requests, respondes, headers, status code, route e query parameters, etc. Também possuem profundidade em Streams no NodeJS e como aplica-las para realizarmos operações assíncronas e parciais em nosso back-end.
+
+Como o objetivo é entender o que os famosos frameworks fazem por debaixo dos panos, a API é simples e é composta pelas rotas abaixo:
+
+<details>
+  <summary>GET <code>/users</code></summary>
+  <br>
+  Rota para listar os usuários cadastrados. Seu retorno será um JSON com um array contendo os objetos de todos os usuários cadastrados.
+</details>
+
+<details>
+  <summary>POST <code>/users</code></summary>
+  <br>
+  Rota para cadastrar um novo usuário. O corpo da requisição é semelhante ao exemplo abaixo e a rota não retornará nada além do status code <code>201</code>.
+  <br>
+  <pre>
+    <code>
+      {
+        "name": "John Doe",
+        "email": "johndoe@example.com"
+      }
+    </code>
+  </pre>
+</details>
+
+<details>
+  <summary>PUT <code>/users/{userId}</code></summary>
+  <br>
+  Rota para atualizar o cadastro de um usuário. A rota recebe como parâmetro o id do usuário a ser atualizado e o corpo da requisição é semelhante ao exemplo abaixo e substituirá os dados preenchidos anteriormente. A rota não retornará nada além do status code <code>204</code>.
+  <br>
+  <pre>
+    <code>
+      {
+        "name": "John Doe",
+        "email": "johndoe@example.com"
+      }
+    </code>
+  </pre>
+</details>
+
+<details>
+  <summary>DELETE <code>/users/{userId}</code></summary>
+  <br>
+  Rota para remover o cadastro de um usuário. A rota recebe como parâmetro o id do usuário a ser excluído. A rota não retornará nada além do status code <code>204</code>.
+</details>
 
 ## Instalação
 
@@ -39,11 +83,6 @@ $ git clone git@github.com:MrRioja/nodejs-fundamentals.git
 
 # Acesse a pasta do projeto no terminal/cmd
 $ cd nodejs-fundamentals
-
-# Instale as dependências
-$ npm install
-# Caso prefira usar o Yarn execute o comando abaixo
-$ yarn
 
 # Execute a aplicação em modo de desenvolvimento
 $ npm run dev
